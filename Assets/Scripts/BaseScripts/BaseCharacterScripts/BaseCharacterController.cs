@@ -21,7 +21,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
         PoolingObject.Instance.SetupPool(characterShoot.BulletsStack, shipSO.BulletPrefab, 1);
         characterHealth.SetMaxHealth(shipSO.MaxHealth);
-        SetCharacterShootThem();
+        SetCharacterIsShooting();
     }
 
     protected virtual void Update()
@@ -34,7 +34,7 @@ public abstract class BaseCharacterController : MonoBehaviour
         characterShoot.CharacterShooting(shipSO.BulletPrefab);
     }
 
-    protected virtual void SetCharacterShootThem()
+    protected virtual void SetCharacterIsShooting()
     {
         foreach (var bullet in characterShoot.BulletsStack)
         {
