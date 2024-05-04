@@ -8,7 +8,7 @@ public abstract class BaseCharacterController : MonoBehaviour
     [SerializeField] protected BaseCharacterHealth characterHealth;
     [SerializeField] protected BaseCharacterShoot characterShoot;
     [SerializeField] protected BaseCharacterMovement characterMovement;
-    [SerializeField] private BaseShipSO shipSO;
+    [SerializeField] protected BaseShipSO shipSO;
     public BaseShipSO ShipSO => shipSO;
     public BaseCharacterHealth CharacterHealth => characterHealth;
     public BaseCharacterShoot CharacterShoot => characterShoot;
