@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class BaseCharacterShoot : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private GameObject effectShoot;
+    [SerializeField] protected GameObject bulletPrefab;
+    [SerializeField] protected GameObject effectShoot;
     [SerializeField] protected Transform pointShoot;
 
     protected virtual void Shoot()

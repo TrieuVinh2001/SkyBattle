@@ -6,7 +6,7 @@ public abstract class BaseCharacterBullet : MonoBehaviour
 {
     [SerializeField] protected float speedBullet;
     [SerializeField] protected float damage;
-    [SerializeField] private GameObject explosionEffect;
+    [SerializeField] protected GameObject explosionEffect;
 
 
     protected virtual void Update()
@@ -16,7 +16,7 @@ public abstract class BaseCharacterBullet : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             DestroyBullet();
         }

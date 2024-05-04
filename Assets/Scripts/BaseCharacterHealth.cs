@@ -6,7 +6,7 @@ public class BaseCharacterHealth : MonoBehaviour
 {
     [SerializeField] protected float maxHealth;
     protected float currentHealth;
-    [SerializeField] private GameObject explosionEffect;
+    [SerializeField] protected GameObject explosionEffect;
     
     protected virtual void Start()
     {
