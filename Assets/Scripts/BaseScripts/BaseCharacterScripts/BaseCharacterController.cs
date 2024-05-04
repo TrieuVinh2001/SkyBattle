@@ -9,8 +9,6 @@ public abstract class BaseCharacterController : MonoBehaviour
     [SerializeField] protected BaseCharacterShoot characterShoot;
     [SerializeField] protected BaseCharacterMovement characterMovement;
     [SerializeField] private BaseShipSO shipSO;
-    [Space, Header("Base Properties")]
-    [SerializeField] protected float characterSpeed;
     public BaseShipSO ShipSO => shipSO;
     public BaseCharacterHealth CharacterHealth => characterHealth;
     public BaseCharacterShoot CharacterShoot => characterShoot;
@@ -28,7 +26,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     protected virtual void Update()
     {
-        characterMovement.CharacterMoving(characterSpeed);
+        characterMovement.CharacterMoving();
     }
 
     protected virtual void FixedUpdate()

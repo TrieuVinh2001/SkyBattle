@@ -4,7 +4,10 @@ using UnityEngine;
 
 public abstract class BaseCharacterMovement : MonoBehaviour
 {
-    public virtual  void CharacterMoving(float characterSpeed)
+    [Header("Character properties")]
+    [SerializeField] protected float ChacterSpeed;
+    [SerializeField]
+    public virtual  void CharacterMoving()
     {
         // Moving
     }
