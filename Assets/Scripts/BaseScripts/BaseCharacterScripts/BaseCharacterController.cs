@@ -13,6 +13,16 @@ public abstract class BaseCharacterController : MonoBehaviour
     public BaseCharacterHealth CharacterHealth => characterHealth;
     public BaseCharacterShoot CharacterShoot => characterShoot;
 
+    protected virtual void OnEnable()
+    {
+
+    }
+
+    protected virtual void OnDisable() 
+    {
+        characterHealth.SetMaxHealth(shipSO.MaxHealth);
+    }
+
     protected virtual void Start()
     {
         characterHealth = GetComponent<BaseCharacterHealth>();
@@ -20,13 +30,13 @@ public abstract class BaseCharacterController : MonoBehaviour
         characterMovement = GetComponent<BaseCharacterMovement>();
 
         PoolingObject.Instance.SetupPool(characterShoot.BulletsStack, shipSO.BulletPrefab, 1);
-        characterHealth.SetMaxHealth(shipSO.MaxHealth);
         SetCharacterIsShooting();
+        SpawnCharacterModel();
     }
 
     protected virtual void Update()
     {
-        characterMovement.CharacterMoving();
+
     }
 
     protected virtual void FixedUpdate()
@@ -40,5 +50,10 @@ public abstract class BaseCharacterController : MonoBehaviour
         {
             bullet.GetComponent<BaseCharacterBullet>().SetBaseCharacterController(this);
         }
+    }
+
+    protected virtual void SpawnCharacterModel()
+    {
+        var shipModel = Instantiate(shipSO.CharacterModel);
     }
 }

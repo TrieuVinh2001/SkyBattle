@@ -6,7 +6,7 @@ public abstract class BaseCharacterMovement : MonoBehaviour
 {
     [Header("Character properties")]
     [SerializeField] protected float ChacterSpeed;
-    public virtual  void CharacterMoving()
+    public virtual  void CharacterMoving(Vector3 destination)
     {
         // Moving
     }

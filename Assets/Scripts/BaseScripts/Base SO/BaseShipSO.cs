@@ -6,7 +6,7 @@ public enum ShipType { Player, enemy, other}
 public class BaseShipSO : ScriptableObject
 {
     public ShipType ShipType;
-    public BaseCharacterController CharacterModel;
+    public GameObject CharacterModel;
     public PooledObject BulletPrefab;
     public WeaponSO StartWeapon;
     public float Armor;
