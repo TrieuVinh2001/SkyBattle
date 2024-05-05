@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1369868914111085635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.95, y: 2.74, z: 0}
+  m_LocalPosition: {x: -3.23, y: 3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1617647724651900513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 4228898644374819078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.57, y: 4.88, z: 0}
+  m_LocalPosition: {x: 3, y: 4.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,9 +143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: -6316566407733839480, guid: c7520c739005db94597d4e162b524dbc, type: 3}
   count: 10
-  speed: 5
-  waitCreat: 1
-  timeBetween: 3
+  speed: 15
+  waitCreat: 0.5
+  timeBetween: 1
   pathPoints:
   - {fileID: 3252304938374507028}
   - {fileID: 5150908457560374786}
@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 8061365777746897290}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.34, y: -3.72, z: 0}
+  m_LocalPosition: {x: -4.84, y: 1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

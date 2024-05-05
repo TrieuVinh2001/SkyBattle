@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: -6847369809099434347}
   - component: {fileID: 9128491556240460261}
   - component: {fileID: 6303414711989360559}
+  - component: {fileID: 3515895455931163391}
   m_Layer: 0
   m_Name: Base Prefab Enemy
   m_TagString: Untagged
@@ -317,6 +318,18 @@ PolygonCollider2D:
       - {x: 0.2610262, y: -0.45313525}
       - {x: 0.5445868, y: 0.09044403}
   m_UseDelaunayMesh: 0
+--- !u!114 &3515895455931163391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7036423688056905455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76685f0e61f14343ab498ca2f77f6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9220012259437942884
 GameObject:
   m_ObjectHideFlags: 0

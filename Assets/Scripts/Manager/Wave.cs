@@ -41,8 +41,7 @@ public class Wave : MonoBehaviour
 
     private void Start()
     {
-        BaseCharacterController baseCharacterController = GetComponent<BaseCharacterController>();
-        PoolingObject.Instance.SetupPool(EnemyStack, enemy, count, gameObject.transform);
+        PoolingObject.Instance.SetupPool(enemyStack, enemy, count, gameObject.transform);
         StartCoroutine(CreateEnemyWave());
     }
 
@@ -52,7 +51,7 @@ public class Wave : MonoBehaviour
         yield return new WaitForSeconds(waitCreat);
         for (int i = 0; i < count; i++) //Duyệt từng kẻ thù
         {
-            GameObject newEnemy = PoolingObject.Instance.GetPooledObject(EnemyStack, enemy, transform).gameObject;//Đặt biến tạo ra kẻ thù
+            GameObject newEnemy = PoolingObject.Instance.GetPooledObject(enemyStack, enemy, transform).gameObject;//Đặt biến tạo ra kẻ thù
             FollowThePath followComponent = newEnemy.GetComponent<FollowThePath>();//gọi script FollowThePath
             followComponent.path = pathPoints;         //Cho path của kẻ thù bằng các điểm ở đây
             followComponent.speed = speed;
