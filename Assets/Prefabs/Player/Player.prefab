@@ -8,49 +8,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -6298275890951767025, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: endAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -6298275890951767025, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: startAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -6298275890951767025, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: bulletHolder
-      value: 
-      objectReference: {fileID: 5077042499270396174}
-    - target: {fileID: -6298275890951767025, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: baseCharacterController
-      value: 
-      objectReference: {fileID: 3588042954881749241}
     - target: {fileID: 2866193688196739525, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573514445618515132, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: shipSO
-      value: 
-      objectReference: {fileID: 11400000, guid: 74e13de7c9426cb42b1d80dbc96ff2a4, type: 2}
-    - target: {fileID: 4573514445618515132, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: shipModel
-      value: 
-      objectReference: {fileID: 2653661371208690630}
-    - target: {fileID: 5828020126952908125, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: m_Size.x
-      value: 0.61296296
-      objectReference: {fileID: 0}
-    - target: {fileID: 5828020126952908125, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: m_Size.y
-      value: 0.65833336
-      objectReference: {fileID: 0}
-    - target: {fileID: 5828020126952908125, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: db2a5cfbc3d4ba94e820ed95b7e81733, type: 3}
-    - target: {fileID: 5828020126952908125, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6078035210583690820, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -92,37 +52,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6363530223833201500, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.355
-      objectReference: {fileID: 0}
-    - target: {fileID: 7299608793109672714, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-      propertyPath: shipModel
-      value: 
-      objectReference: {fileID: 2653661371208690630}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
---- !u!1 &2653661371208690630 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3053611880577087363, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-  m_PrefabInstance: {fileID: 1059235582806613061}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3588042954881749241 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4573514445618515132, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-  m_PrefabInstance: {fileID: 1059235582806613061}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1badeb50224844d9279884d2763db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &5077042499270396174 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5244000202367866187, guid: c1a0ec977e9aaa14fa7c8f03dbdb3f35, type: 3}
-  m_PrefabInstance: {fileID: 1059235582806613061}
-  m_PrefabAsset: {fileID: 0}
