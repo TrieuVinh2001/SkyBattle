@@ -9,13 +9,14 @@ public abstract class BaseCharacterController : MonoBehaviour
     [SerializeField] protected BaseCharacterShoot characterShoot;
     [SerializeField] protected BaseCharacterMovement characterMovement;
     [SerializeField] protected BaseShipSO shipSO;
+    [SerializeField] protected GameObject shipModel;
     public BaseShipSO ShipSO => shipSO;
     public BaseCharacterHealth CharacterHealth => characterHealth;
     public BaseCharacterShoot CharacterShoot => characterShoot;
 
     protected virtual void OnEnable()
     {
-
+        characterShoot.SetNumberOfBulletPerShoot(shipSO.numberOfBulletsPerShot);
     }
 
     protected virtual void OnDisable() 
@@ -54,6 +55,6 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     protected virtual void SpawnCharacterModel()
     {
-        var shipModel = Instantiate(shipSO.CharacterModel);
+        this.shipModel.GetComponent<SpriteRenderer>().sprite = shipSO.CharacterModel;
     }
 }
