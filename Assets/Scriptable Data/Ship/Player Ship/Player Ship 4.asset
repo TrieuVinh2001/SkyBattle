@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player Ship 4
   m_EditorClassIdentifier: 
   ShipType: 0
-  CharacterModel: {fileID: 21300000, guid: a532ee07ed298f44ca9c608a1d603b8c, type: 3}
+  CharacterModelSprite: {fileID: 21300000, guid: a532ee07ed298f44ca9c608a1d603b8c, type: 3}
   BulletPrefab: {fileID: 0}
   StartWeapon: {fileID: 0}
   Armor: 5
@@ -25,3 +25,4 @@ MonoBehaviour:
   CharacterLever: 0
   Name: 
   Description: 
+  ShipModel: {fileID: 0}

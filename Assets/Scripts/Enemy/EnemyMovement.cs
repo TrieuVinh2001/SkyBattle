@@ -16,6 +16,6 @@ public class EnemyMovement : BaseCharacterMovement
 
     public override void CharacterMoving(Vector3 destination)
     {
-        
+       shipModel.transform.position = destination;
     }
 }

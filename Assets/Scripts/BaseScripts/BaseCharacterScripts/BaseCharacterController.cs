@@ -23,10 +23,6 @@ public abstract class BaseCharacterController : MonoBehaviour
     protected virtual void OnEnable()
     {
         characterShoot.SetNumberOfBulletPerShoot(shipSO.numberOfBulletsPerShot);
-    }
-
-    protected virtual void OnDisable() 
-    {
         characterHealth.SetMaxHealth(shipSO.MaxHealth);
     }
 
@@ -42,6 +38,6 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     protected virtual void SpawnCharacterModel()
     {
-        this.shipModel.GetComponent<SpriteRenderer>().sprite = shipSO.CharacterModel;
+        this.shipModel.GetComponent<SpriteRenderer>().sprite = shipSO.CharacterModelSprite;
     }
 }

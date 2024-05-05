@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Wave : MonoBehaviour
+public class WaveController : MonoBehaviour
 {
     #region FIELDS
     [Tooltip("Enemy's prefab")]
@@ -35,14 +35,24 @@ public class Wave : MonoBehaviour
     //[Tooltip("if testMode is marked the wave will be re-generated after 3 sec")]
     //public bool testMode;//Nếu true thì làn sóng được tạo lại sau 3 giây
     #endregion
-
+    [SerializeField] private List<ShipSO> listShipSOEnemies = new List<ShipSO>();
     private Stack<PooledObject> enemyStack = new Stack<PooledObject>();
     public Stack<PooledObject> EnemyStack => enemyStack;
 
     private void Start()
     {
+                GetRandomEnemyShip();
         PoolingObject.Instance.SetupPool(enemyStack, enemy, count, gameObject.transform);
         StartCoroutine(CreateEnemyWave());
+    }
+
+    public void GetRandomEnemyShip()
+    {
+        foreach (var ship in listShipSOEnemies)
+        {
+            int shipRandomIndex = UnityEngine.Random.Range(0, listShipSOEnemies.Count);
+            enemy = listShipSOEnemies[shipRandomIndex].ShipModel;
+        }    
     }
 
     //Tạo kẻ thù và xác định các tham số

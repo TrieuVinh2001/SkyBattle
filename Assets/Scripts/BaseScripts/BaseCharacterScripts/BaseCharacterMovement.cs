@@ -4,9 +4,7 @@ using UnityEngine;
 
 public abstract class BaseCharacterMovement : MonoBehaviour
 {
-    [Header("Character properties")]
-    [SerializeField] protected float ChacterSpeed;
-
+    [SerializeField] protected GameObject shipModel;
     protected virtual void Start()
     {
 

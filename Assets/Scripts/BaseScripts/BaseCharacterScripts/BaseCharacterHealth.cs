@@ -10,6 +10,7 @@ public abstract class BaseCharacterHealth : MonoBehaviour,IDamageable
     public virtual void SetMaxHealth(float maxHealth)
     {
         this.maxHealth = maxHealth;
+        currentHealth = maxHealth;
     }
 
     public void ReciveDamage(float damage)
@@ -17,6 +18,7 @@ public abstract class BaseCharacterHealth : MonoBehaviour,IDamageable
         if (currentHealth - damage > 0)
         {
             currentHealth -= damage;
+            Debug.Log(damage);
         }
         else
         {
@@ -26,6 +28,7 @@ public abstract class BaseCharacterHealth : MonoBehaviour,IDamageable
 
     protected virtual void Death()
     {
+        Debug.Log("death");
         //Instantiate(explosionEffect);
         //Destroy(gameObject);
     }

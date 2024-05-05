@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2558752840551947806}
   - component: {fileID: 8487169609784270216}
   - component: {fileID: 4780705757654337412}
+  - component: {fileID: 4887222356186036556}
   m_Layer: 0
   m_Name: Ship1_bullet
   m_TagString: Untagged
@@ -150,3 +151,38 @@ MonoBehaviour:
     m_Bits: 0
   radiusAffect: 0
   timeDelay: 0.5
+--- !u!58 &4887222356186036556
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6641276135258806048}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.029399388, y: 0.0000000035046797}
+  serializedVersion: 2
+  m_Radius: 0.12760785

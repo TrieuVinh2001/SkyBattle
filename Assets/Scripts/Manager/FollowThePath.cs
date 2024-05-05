@@ -18,7 +18,6 @@ public class FollowThePath : MonoBehaviour
     [HideInInspector]
     public bool movingIsActive;   //whether 'Enemy' moves or not
 
-    //setting path parameters for the 'Enemy' and sending the 'Enemy' to the path starting point
     public void SetPath()
     {
         currentPathPercent = 0;

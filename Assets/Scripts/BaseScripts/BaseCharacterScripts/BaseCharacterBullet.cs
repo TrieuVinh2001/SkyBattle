@@ -38,15 +38,16 @@ public abstract class BaseCharacterBullet : MonoBehaviour
     protected abstract void BulletMoving();
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IDamageable iDamageable))
+        if (collision.TryGetComponent(out IDamageable iDamageable) && collision.GetComponent<BaseCharacterController>().ShipSO.ShipType != baseCharacterController.ShipSO.ShipType)
         {
             iDamageable = collision.GetComponent<IDamageable>();
-            if (collision.GetComponent<BaseCharacterController>() != null && iDamageable != null)
+            BaseCharacterController collisionController = collision.GetComponent<BaseCharacterController>();
+            if (collisionController != null && iDamageable != null )
             {
-                if (collision.GetComponent<BaseCharacterController>().ShipSO.ShipType == baseCharacterController.ShipSO.ShipType) return;
-                iDamageable.ReciveDamage(damageCharaccterRecived - collision.GetComponent<BaseCharacterController>().ShipSO.Armor);
+                if (collisionController.ShipSO.ShipType == baseCharacterController.ShipSO.ShipType) return;
+                iDamageable.ReciveDamage(baseCharacterController.ShipSO.Damage /*+ baseCharacterController.ShipSO.StartWeapon.weaponDamage*/ - collisionController.ShipSO.Armor);
+                ReleaseBulletToStack();
             } 
-            ReleaseBulletToStack();
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : BaseCharacterMovement
 {
-    [SerializeField] private GameObject shipModel;
+
     protected override void Start()
     {
         base.Start();
