@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +6,16 @@ public abstract class BaseCharacterMovement : MonoBehaviour
 {
     [Header("Character properties")]
     [SerializeField] protected float ChacterSpeed;
-    public virtual  void CharacterMoving(Vector3 destination)
+
+    protected virtual void Start()
     {
-        // Moving
+
     }
+
+    protected virtual void Update()
+    {
+
+    }
+
+    public abstract void CharacterMoving(Vector3 destination);
 }

@@ -21,7 +21,7 @@ public abstract class BaseCharacterBullet : MonoBehaviour
     protected private PooledObject pooledObject;
     protected void OnEnable()
     {
-        damageCharaccterRecived = GetDamage();
+        //damageCharaccterRecived = GetDamage();
         Deactive();
     }
 
@@ -32,9 +32,10 @@ public abstract class BaseCharacterBullet : MonoBehaviour
 
     protected virtual void Update()
     {
-        transform.position = Vector2.up * speedBullet * Time.deltaTime;
+        BulletMoving();
     }
 
+    protected abstract void BulletMoving();
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out IDamageable iDamageable))
@@ -73,6 +74,10 @@ public abstract class BaseCharacterBullet : MonoBehaviour
 
     public float GetDamage()
     {
-       return baseCharacterController.ShipSO.Damage + baseCharacterController.ShipSO.StartWeapon.weaponDamage;
+        if(baseCharacterController != null)
+        {
+            return baseCharacterController.ShipSO.Damage + baseCharacterController.ShipSO.StartWeapon.weaponDamage;
+        }
+        return 0;
     }
 }

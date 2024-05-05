@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 public class PoolingObject : Singleton<PoolingObject>
 {
-    public void SetupPool(Stack<PooledObject> stack, PooledObject objectToPool, int initPoolSize)
+    public void SetupPool(Stack<PooledObject> stack, PooledObject objectToPool, int initPoolSize,Transform holder)
     {
         if (objectToPool == null)
         {
@@ -13,14 +13,14 @@ public class PoolingObject : Singleton<PoolingObject>
         }
         for (int i = 0; i < initPoolSize; i++)
         {
-            PooledObject instance = Instantiate(objectToPool);
+            PooledObject instance = Instantiate(objectToPool, holder);
             instance.Pool = this;
             instance.gameObject.SetActive(false);
             stack.Push(instance);
         }
     }
 
-    public PooledObject GetPooledObject(Stack<PooledObject> stack, PooledObject objectToPool)
+    public PooledObject GetPooledObject(Stack<PooledObject> stack, PooledObject objectToPool, Transform holder)
     {
         if (objectToPool == null)
         {
@@ -29,7 +29,7 @@ public class PoolingObject : Singleton<PoolingObject>
 
         if (stack.Count == 0)
         {
-            PooledObject newInstance = Instantiate(objectToPool);
+            PooledObject newInstance = Instantiate(objectToPool, holder);
             newInstance.Pool = this;
             return newInstance;
         }
