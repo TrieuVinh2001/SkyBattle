@@ -8,14 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -6847369809099434347, guid: 11a13f134cdaa9d49b6ccbaa221e9ebd, type: 3}
-      propertyPath: shipModel
-      value: 
-      objectReference: {fileID: 7402836783134635622}
-    - target: {fileID: 372952381856153728, guid: 11a13f134cdaa9d49b6ccbaa221e9ebd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.351
-      objectReference: {fileID: 0}
     - target: {fileID: 7036423688056905455, guid: 11a13f134cdaa9d49b6ccbaa221e9ebd, type: 3}
       propertyPath: m_Name
       value: Enemy 1
@@ -65,8 +57,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a13f134cdaa9d49b6ccbaa221e9ebd, type: 3}
---- !u!1 &7402836783134635622 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3514706139848408973, guid: 11a13f134cdaa9d49b6ccbaa221e9ebd, type: 3}
-  m_PrefabInstance: {fileID: 6231458278445091307}
-  m_PrefabAsset: {fileID: 0}

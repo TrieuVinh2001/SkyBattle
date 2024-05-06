@@ -19,6 +19,7 @@ public abstract class BaseCharacterBullet : MonoBehaviour
     [Space, Header("Time Delay Deactive bullet")]
     [SerializeField] protected float timeDelay;
     protected private PooledObject pooledObject;
+    protected Vector2 shootDirection;
     protected void OnEnable()
     {
         //damageCharaccterRecived = GetDamage();
@@ -35,7 +36,10 @@ public abstract class BaseCharacterBullet : MonoBehaviour
         BulletMoving();
     }
 
-    protected abstract void BulletMoving();
+    protected virtual void BulletMoving()
+    {
+        transform.Translate(shootDirection * speedBullet * Time.deltaTime);
+    }
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out IDamageable iDamageable) && collision.GetComponent<BaseCharacterController>().ShipSO.ShipType != baseCharacterController.ShipSO.ShipType)
@@ -44,7 +48,6 @@ public abstract class BaseCharacterBullet : MonoBehaviour
             BaseCharacterController collisionController = collision.GetComponent<BaseCharacterController>();
             if (collisionController != null && iDamageable != null )
             {
-                if (collisionController.ShipSO.ShipType == baseCharacterController.ShipSO.ShipType) return;
                 iDamageable.ReciveDamage(baseCharacterController.ShipSO.Damage /*+ baseCharacterController.ShipSO.StartWeapon.weaponDamage*/ - collisionController.ShipSO.Armor);
                 ReleaseBulletToStack();
             } 
@@ -80,5 +83,10 @@ public abstract class BaseCharacterBullet : MonoBehaviour
             return baseCharacterController.ShipSO.Damage + baseCharacterController.ShipSO.StartWeapon.weaponDamage;
         }
         return 0;
+    }
+
+    public void GetShootDirection(Vector2 dir)
+    {
+        shootDirection = dir;
     }
 }

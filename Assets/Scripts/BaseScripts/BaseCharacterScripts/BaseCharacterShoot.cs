@@ -46,7 +46,9 @@ public abstract class BaseCharacterShoot : MonoBehaviour
                 Vector2 bulDir = (bulMoveDir - transform.position).normalized;
                 GameObject bulletObject = PoolingObject.Instance.GetPooledObject(bulletsStack, bulletPrefab,bulletHolder).gameObject;
                 bulletObject.transform.position = pointShoot.position;
-                bulletObject.GetComponent<BaseCharacterBullet>().SetBaseCharacterController(baseCharacterController);
+                BaseCharacterBullet baseCharacterBullet = bulletObject.GetComponent<BaseCharacterBullet>();
+                baseCharacterBullet.SetBaseCharacterController(baseCharacterController);
+                baseCharacterBullet.GetShootDirection(bulDir);
                 bulletObject.SetActive(true);
                 angle += angleStep;
                 timeDelay = timeDelayMax;

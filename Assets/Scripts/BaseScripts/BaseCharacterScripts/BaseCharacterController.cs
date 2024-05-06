@@ -13,6 +13,7 @@ public abstract class BaseCharacterController : MonoBehaviour
     public BaseShipSO ShipSO => shipSO;
     public BaseCharacterHealth CharacterHealth => characterHealth;
     public BaseCharacterShoot CharacterShoot => characterShoot;
+    public BaseCharacterMovement CharacterMovement => characterMovement;
 
     protected virtual void Awake()
     {

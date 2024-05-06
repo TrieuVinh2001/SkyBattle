@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class BaseCharacterMovement : MonoBehaviour
 {
     [SerializeField] protected GameObject shipModel;
+    public GameObject ShipModel => shipModel;
     protected virtual void Start()
     {
 

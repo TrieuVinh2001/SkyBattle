@@ -17,7 +17,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 8487169609784270216, guid: f757854893f51c043a07bc21e83445d7, type: 3}
   StartWeapon: {fileID: 0}
   Armor: 2
-  Damage: 5
+  Damage: 1
   MaxHealth: 50
   CharacterSpeed: 0
   CriticalRate: 0
