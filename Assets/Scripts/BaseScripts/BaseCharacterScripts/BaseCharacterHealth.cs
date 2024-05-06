@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static EffectInfo;
-
+using System;
 public abstract class BaseCharacterHealth : MonoBehaviour,IDamageable
 {
+    public event Action OnHealthChange;
+    public event Action OnCharacterDead;
     protected float maxHealth;
     protected float currentHealth;
     protected BaseCharacterController controller;   
@@ -23,7 +25,7 @@ public abstract class BaseCharacterHealth : MonoBehaviour,IDamageable
     public void ReciveDamage(float damage)
     {
         currentHealth -= damage;
-        EffectController.Instance.SpawnFX(EffectType.Hit, controller.CharacterMovement.ShipModel.transform);
+        OnHealthChange?.Invoke();
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -33,8 +35,7 @@ public abstract class BaseCharacterHealth : MonoBehaviour,IDamageable
 
     protected virtual void Death()
     {
-        Debug.Log("death");
-        //EffectController.Instance.SpawnFX(EffectType.Explosion, controller.CharacterMovement.ShipModel.transform);
+        OnHealthChange?.Invoke();
         gameObject.SetActive(false);
     }
 }

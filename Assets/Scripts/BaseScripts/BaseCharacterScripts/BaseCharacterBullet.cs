@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using static EffectInfo;
 
 [RequireComponent(typeof(PooledObject))]
 public abstract class BaseCharacterBullet : MonoBehaviour
@@ -49,6 +50,7 @@ public abstract class BaseCharacterBullet : MonoBehaviour
             if (collisionController != null && iDamageable != null )
             {
                 iDamageable.ReciveDamage(baseCharacterController.ShipSO.Damage /*+ baseCharacterController.ShipSO.StartWeapon.weaponDamage*/ - collisionController.ShipSO.Armor);
+                EffectController.Instance.SpawnFX(EffectType.Hit, collision.transform);
                 ReleaseBulletToStack();
             } 
         }
