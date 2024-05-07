@@ -28,7 +28,7 @@ public abstract class BaseCharacterShoot : MonoBehaviour
 
     protected virtual void Start()
     {
-        PoolingObject.Instance.SetupPool(BulletsStack, baseCharacterController.ShipSO.BulletPrefab, 0, BulletHolder);
+        PoolingObject.Instance.SetupPool(BulletsStack, baseCharacterController.ShipSO.StartWeapon.weaponBulletPrefab, 0, BulletHolder);
     }
 
     public virtual void CharacterShooting(PooledObject bulletPrefab)

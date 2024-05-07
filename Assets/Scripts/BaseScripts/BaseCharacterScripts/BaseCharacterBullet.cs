@@ -23,7 +23,7 @@ public abstract class BaseCharacterBullet : MonoBehaviour
     protected Vector2 shootDirection;
     protected void OnEnable()
     {
-        //damageCharaccterRecived = GetDamage();
+        damageCharaccterRecived = GetDamage();
         Deactive();
     }
 
@@ -43,13 +43,13 @@ public abstract class BaseCharacterBullet : MonoBehaviour
     }
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IDamageable iDamageable) && collision.GetComponent<BaseCharacterController>().ShipSO.ShipType != baseCharacterController.ShipSO.ShipType)
+        if (collision.transform.parent.TryGetComponent(out IDamageable iDamageable) && collision.GetComponentInParent<BaseCharacterController>().ShipSO.ShipType != baseCharacterController.ShipSO.ShipType)
         {
-            iDamageable = collision.GetComponent<IDamageable>();
-            BaseCharacterController collisionController = collision.GetComponent<BaseCharacterController>();
+            iDamageable = collision.GetComponentInParent<IDamageable>();
+            BaseCharacterController collisionController = collision.GetComponentInParent<BaseCharacterController>();
             if (collisionController != null && iDamageable != null )
             {
-                iDamageable.ReciveDamage(baseCharacterController.ShipSO.Damage /*+ baseCharacterController.ShipSO.StartWeapon.weaponDamage*/ - collisionController.ShipSO.Armor);
+                iDamageable.ReciveDamage(baseCharacterController.ShipSO.Damage + baseCharacterController.ShipSO.StartWeapon.weaponDamage - collisionController.ShipSO.Armor);
                 EffectController.Instance.SpawnFX(EffectType.Hit, collision.transform);
                 ReleaseBulletToStack();
             } 

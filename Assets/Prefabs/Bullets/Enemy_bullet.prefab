@@ -95,13 +95,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseCharacterController: {fileID: 0}
-  speedBullet: 10
+  speedBullet: 2
   explosionEffect: {fileID: 0}
   activeAffect:
     serializedVersion: 2
     m_Bits: 0
   radiusAffect: 0
-  timeDelay: 1
+  timeDelay: 3
 --- !u!1 &8038929545129078621
 GameObject:
   m_ObjectHideFlags: 0

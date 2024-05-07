@@ -34,7 +34,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     protected virtual void Update()
     {
-        characterShoot.CharacterShooting(shipSO.BulletPrefab);
+        characterShoot.CharacterShooting(shipSO.StartWeapon.weaponBulletPrefab);
     }
 
     protected virtual void SpawnCharacterModel()

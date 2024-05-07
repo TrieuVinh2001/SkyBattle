@@ -14,13 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShipType: 1
   CharacterModelSprite: {fileID: 21300000, guid: 70c656dee652c8248af90058920423c2, type: 3}
-  BulletPrefab: {fileID: 3336339759180670863, guid: a0eaafa07efdfff4697311677d74bfbf, type: 3}
-  StartWeapon: {fileID: 0}
-  Armor: 0
+  StartWeapon: {fileID: 11400000, guid: efdf53adb1f535a42b19f3dbff5416ae, type: 2}
+  Armor: 3
   Damage: 3
-  MaxHealth: 10
+  MaxHealth: 150
   CharacterSpeed: 0
-  CriticalRate: 0
   numberOfBulletsPerShot: 1
   CharacterLever: 0
   Name: 

@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 778a589bf41c7c34a9aad9ecd6eaec10, type: 3}
-  m_Name: Player Ship 3
+  m_Name: Player_Ship3_Level1
   m_EditorClassIdentifier: 
   ShipType: 0
-  CharacterModelSprite: {fileID: 21300000, guid: e4df3d4011a8e8e43a0fdd013d55c372, type: 3}
-  BulletPrefab: {fileID: 0}
-  StartWeapon: {fileID: 0}
-  Armor: 4
-  Damage: 8
-  MaxHealth: 0
+  CharacterModelSprite: {fileID: 21300000, guid: 4965a36b9caf3ac489ce5e921c8a6013, type: 3}
+  StartWeapon: {fileID: 11400000, guid: 64c16e3727b272c4692cf5ef979d3cd5, type: 2}
+  Armor: 8
+  Damage: 12
+  MaxHealth: 200
   CharacterSpeed: 0
-  CriticalRate: 0
   numberOfBulletsPerShot: 1
   CharacterLever: 0
   Name: 
